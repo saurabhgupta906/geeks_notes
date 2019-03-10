@@ -1,0 +1,335 @@
+Notes :
+
+======================================================================
+https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/
+======================================================================
+
+I am sharing some of the questions that I will discuss tomorrow. Just have a look at these questions and try yourself (give some time (10-15 minutes) to think about the logic). Actually I don't provide much time in classroom to think about the logic/solution, that's why I am sharing these questions before. I will discuss these questions (and some other questions also) in detail, so don't worry, if you are not able to think about the correct logic/solution. Just give a try.
+
+https://www.geeksforgeeks.org/fractional-knapsack-problem/
+https://www.geeksforgeeks.org/sort-elements-by-frequency/
+https://www.geeksforgeeks.org/sorting-array-elements-frequency-set-3-using-stl/
+https://www.geeksforgeeks.org/chocolate-distribution-problem/
+https://leetcode.com/problems/distribute-candies/
+https://www.geeksforgeeks.org/find-winner-election-votes-represented-candidate-names/
+https://www.geeksforgeeks.org/design-a-data-structure-that-supports-insert-delete-search-and-getrandom-in-constant-time/
+
+You can have to look at the first 3 videos of this playlist (total aprox 20 minutes) for basic idea of hashing. 
+
+https://www.youtube.com/watch?v=wWgIAphfn2U&list=PLqM7alHXFySGwXaessYMemAnITqlZdZVE
+
+
+
+==========================================================================================================================
+ == Some Basic questions on Recursion  ==
+
+1.  sum of digits of a no.
+// f(234) = 2+3+4 = 9
+public int f(int n)
+{
+  if(n<10) return n;
+  return n%10 + f(n/10);
+}
+
+2. No. of digits in a no.
+// f(501287) = 6
+public int f(int n)
+{
+  if(n<10) return 1;
+  return 1 + f(n/10);
+}
+
+
+3. Count set bits in a no
+// f(15) =4
+public int f(int n)
+{
+  if(n<=1) return n;
+  if(( n & 1)==1) return 1+f(n/2);
+  return f(n/2);
+}
+
+4. Check if two strings are equal or not
+//f("ab","ab",2,0) = true
+public Boolean is_equal(String s1,String s2,int n,int i)
+{
+  if(i==n) return true;
+  if(s1.charAt(i)!=s2.charAt(i)) return false;
+  return is_equal(s1,s2,n,i+1);
+}
+
+5. Check if two strings are equal or not
+//f("ab","ab",2) = true
+public Boolean is_equal2(String s1,String s2,int n)
+{
+  if(n==0) return true;
+  if(s1.charAt(n-1)!=s2.charAt(n-1)) return false;
+  return is_equal2(s1,s2,n-1);
+}
+
+6. Count of 'a' in a string
+public int f(String s,int n,int i)
+{
+  if(i==n) return 0;
+  if(s.charAt(i)=='a') return 1+f(s,n,i+1);
+  return f(s,n,i+1);
+}
+
+7. pow of a no.
+// pow(3,4) = 81
+int pow(int x,int n)
+{
+  if(n==0) return 1;
+  if(n==1) return x;
+  return x* pow(x,n-1);
+}
+
+8. sum of elements of an array
+int sum_(int arr[],int n,int i)
+{
+  if(i==n) return 0;
+
+  return arr[i]+sum_(arr,n,i+1);
+}
+
+Generate all the binary strings of n bits
+Generate all the binary strings of n bits. These binary strings should be in ascending order.
+
+Asked in: Amazon
+video :https://youtu.be/O_5aKT0BSJY
+Examples:
+
+Input : 2
+Output :
+0 0
+0 1
+1 0
+1 1
+
+Input : 3
+Output :
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+Solution:
+
+The idea is to try every permutation. For every position we have 2 options, either ‘0’ or ‘1’. We have used backtracking to try every possibility/permutation. The code is easy to understand and self-explanatory.
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void printTheArray(int arr[],int n){
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+void generateAllBinaryStrings(int n,int arr[],int i)
+{
+    if(i==n) {
+        printTheArray(arr,n);
+        return;
+    }
+
+   // first assign "0" at ith position and try for all other permutations for remaining positions
+    arr[i]=0;
+    generateAllBinaryStrings(n,arr,i+1);
+
+  // And then assign "1" at ith position and try for all other permutations for remaining positions
+    arr[i]=1;
+    generateAllBinaryStrings(n,arr,i+1);
+}
+
+int main() {
+    // your code goes here
+    int n;
+    // cin>>n;
+        n = 3;
+    int arr[n];
+    generateAllBinaryStrings(n,arr,0);
+    return 0;
+}
+
+
+
+============================= hashing =============================
+
+
+1. Find winner of an election where votes are represented as candidate names If there is tie, print lexicographically smaller name.
+
+Examples:
+
+Input :  votes[] = {"john", "johnny", "jackie",
+                    "johnny", "john", "jackie",
+                    "jamie", "jamie", "john",
+                    "johnny", "jamie", "johnny",
+                    "john"};
+Output : John
+We have four Candidates with name as 'John','Johnny', 'jamie', 'jackie'. The candidates John and Johny get maximum votes. Since John
+is alphabetically smaller, we print it. 
+
+2. Given a list of prices of toys and an amount to spend,
+what is the maximum number of toys Mark can buy?
+
+ prices [] = {9, 7, 4 ,6, 2, 13, 3} and k=14
+ ans = 3
+
+ prices: an array of integers representing toy prices
+ k: an integer, Mark's budget
+
+ Algo  - sort in ascending order and pick items from starting till the entire money is spent.
+
+
+
+
+3. Pick only k toys to maximize the total profit because the capacity of bag is only for k items
+
+prices [] = {9, 7, 4 ,6, 2, 13, 3} and k=4
+ans = 13+9+7+6
+
+Algo  - sort in descending order and pick k items from starting.
+
+
+
+
+
+
+4. Sorting the the data of students on the basis
+ of marks obtained.
+
+ int roll_no[] = {10, 20, 5, 40 };
+    int marks[] = {30, 60, 20, 50};
+
+before applying sort :
+10 30
+20 60
+5 20
+40 50
+
+after applying sort:
+5 20
+10 30
+40 50
+20 60
+
+
+
+
+
+
+
+
+==========
+
+#include<bits/stdc++.h>
+using namespace std;
+
+// Driver function to sort the vector elements
+// by second element of pairs
+bool sortbysec(const pair<int,int> &a,
+              const pair<int,int> &b)
+{
+    return (a.second < b.second);
+}
+
+int main()
+{
+    // declaring vector of pairs
+    vector< pair <int, int> > vect;
+
+    // Initialising 1st and 2nd element of pairs
+    // with array values
+    int roll_no[] = {10, 20, 5, 40 };
+    int marks[] = {30, 60, 20, 50};
+    int n = 4;
+
+    // Entering values in vector of pairs
+    for (int i=0; i<n; i++)
+        vect.push_back( make_pair(roll_no[i],marks[i]) );
+
+    // Printing the original vector(before sort())
+    cout << "The vector before sort operation is:\n" ;
+    for (int i=0; i<n; i++)
+    {
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+
+    }
+
+    // Using sort() function to sort by 2nd element
+    // of pair
+    sort(vect.begin(), vect.end(), sortbysec);
+
+    // Printing the sorted vector(after using sort())
+    cout << "The vector after sort operation is:\n" ;
+    for (int i=0; i<n; i++)
+    {
+        // "first" and "second" are used to access
+        // 1st and 2nd element of pair respectively
+        cout << vect[i].first << " "
+             << vect[i].second << endl;
+    }
+    return 0;
+}
+
+
+
+For java: https://www.geeksforgeeks.org/comparable-vs-comparator-in-java/
+
+
+5. fractional knapsack
+
+** https://www.geeksforgeeks.org/fractional-knapsack-problem/
+
+
+
+
+6. Sort the array by frequency
+
+Given an array of integers, sort the array according to frequency of elements.
+If frequencies of two elements are same, print them in increasing order.
+
+Examples:
+
+Input : arr[] = {2, 3, 2, 4, 5, 12, 2, 3, 3, 3, 12}
+Output : 3 3 3 3 2 2 2 12 12 4 5
+Explanation :
+No. Freq
+2  : 3
+3  : 4
+4  : 1
+5  : 1
+12 : 2
+
+https://www.geeksforgeeks.org/sort-elements-by-frequency/
+https://www.geeksforgeeks.org/sorting-array-elements-frequency-set-3-using-stl/
+
+
+
+
+
+7. Distribute Candies
+
+Given an integer array with even length, where different numbers in this array represent different kinds of candies. Each number means one candy of the corresponding kind. You need to distribute these candies equally in number to brother and sister.
+Return the maximum n…
+https://www.geeksforgeeks.org/fractional-knapsack-problem/
+https://www.geeksforgeeks.org/sort-elements-by-frequency/
+https://www.geeksforgeeks.org/sorting-array-elements-frequency-set-3-using-stl/
+https://www.geeksforgeeks.org/chocolate-distribution-problem/
+https://leetcode.com/problems/distribute-candies/
+https://www.geeksforgeeks.org/find-winner-election-votes-represented-candidate-names/
+
+basics : https://www.youtube.com/watch?v=Hg3cTlJVXa8&list=PL_dsdStdDXbq8BTjGdUEWgWYFWYP6pwYb
+
+some other useful links for hashing:
+
+https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/
+https://www.geeksforgeeks.org/hashing-set-1-introduction/
+https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
+https://www.geeksforgeeks.org/check-if-two-arrays-are-equal-or-not/

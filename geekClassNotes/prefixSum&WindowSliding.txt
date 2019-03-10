@@ -1,0 +1,16 @@
+=> prefix sum and Window sliding 
+https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
+
+Question 1. find sum of array with in range.
+https://www.geeksforgeeks.org/number-of-subarrays-having-sum-in-a-given-range/
+
+Question 2. find equillibrium in array.
+https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
+
+Question 3. Find if there is a subarray with 0 sum
+https://www.geeksforgeeks.org/find-if-there-is-a-subarray-with-0-sum/
+
+Question 4. given a binary array 
+Largest subarray with equal number of 0s and 1s
+
+https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/

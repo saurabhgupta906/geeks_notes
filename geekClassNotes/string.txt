@@ -1,0 +1,14 @@
+string algo :
+Naive method
+KMP algo
+
+https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching/
+
+https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
+
+Question 1) : Find the first repeated character in a string
+
+https://www.geeksforgeeks.org/find-the-first-repeated-character-in-a-string/
+
+Question 2) Given a string, find its first non-repeating character
+https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-character/
