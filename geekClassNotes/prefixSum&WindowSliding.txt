@@ -14,3 +14,27 @@ Question 4. given a binary array
 Largest subarray with equal number of 0s and 1s
 
 https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/
+
+Question 5 :
+a) Find subarray with given sum | Set 2 (Handles Negative Numbers)
+https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/
+
+or
+
+b) Find subarray with given sum | Set 1 (Nonnegative Numbers)
+http://gdevtest.geeksforgeeks.org/find-subarray-with-given-sum/
+
+Question 6:
+Find maximum (or minimum) sum of a subarray of size k
+
+https://www.geeksforgeeks.org/find-maximum-minimum-sum-subarray-size-k/
+
+Question 7 :
+Largest sum subarray with at-least k numbers
+https://www.geeksforgeeks.org/largest-sum-subarray-least-k-numbers/
+
+Question 8 :
+Count distinct elements in every window of size k
+
+https://www.geeksforgeeks.org/count-distinct-elements-in-every-window-of-size-k/
+
