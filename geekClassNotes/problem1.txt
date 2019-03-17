@@ -1,0 +1,22 @@
+Design an efficient data structure for given operations
+
+1.https://www.geeksforgeeks.org/a-data-structure-question/
+
+Answer : 
+
+2. https://www.geeksforgeeks.org/a-data-structure-question/
+
+3. https://www.geeksforgeeks.org/stock-buy-sell/
+
+4. https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-k-times/
+
+5. https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-twice/
+
+6. https://www.geeksforgeeks.org/maximum-profit-after-buying-and-selling-the-stocks-any-number-of-times/
+
+7. https://www.geeksforgeeks.org/buy-maximum-stocks-stocks-can-bought-th-day
+
+8. LRU CACHE :
+
+9 Dequeue
+

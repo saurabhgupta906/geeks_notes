@@ -1,0 +1,58 @@
+Bubble Sort
+Selection Sort --> cycle sort --> bettoer trhan other in their list
+Insertion sort
+Heap sort
+Mearge sort --> also implement via linked lidt
+Quick Sort
+
+
+Sorting can be define as :
+-> Stability
+--> In place
+
+
+Bubble Sort :
+Extra space not used for copying input items
+
+15,20,5,16
+
+15,5,20,16
+
+15,5,16,20
+
+Swap the element with smallest one till all the element get sort
+
+Stable algo
+
+Selection Sort: 
+
+5,20,15,1,,6,2 
+
+put the largest element in the last index of array
+and again again in remaining sub array
+
+Not stable
+it is In place
+
+
+Insertion sort:
+it works really great in small input
+
+
+Mearge Sort:
+
+prtice question on Question on merage funtion
+
+Merge the array without using extra oxillary space
+
+https://practice.geeksforgeeks.org/problems/merge-sort/1
+
+
+https://www.geeksforgeeks.org/tag-sort/
+
+
+Quick Sort :
+Question partition algo in Quick sort
+Find the median in kth element.
+
+https://www.geeksforgeeks.org/quicksort-tail-call-optimization-reducing-worst-case-space-log-n/

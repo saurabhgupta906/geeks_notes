@@ -12,3 +12,11 @@ https://www.geeksforgeeks.org/find-the-first-repeated-character-in-a-string/
 
 Question 2) Given a string, find its first non-repeating character
 https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-character/
+
+Question 3) Find lexographically Rank of String
+
+str = "abc"
+o/p = 1
+
+Lexicographically smallest string obtained after concatenating array
+https://www.geeksforgeeks.org/lexicographically-smallest-string-obtained-concatenating-array/

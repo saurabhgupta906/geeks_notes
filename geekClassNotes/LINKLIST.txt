@@ -1,0 +1,35 @@
+=>Singly Linklist
+=>DoublylinkList
+=>circular link list(Advantage Round Robin)
+
+Design data structure for a Data Stream with following operation:
+=> Insertion Minimumm,
+=> Minimum Deletion.
+=> Delete Maximum,
+=> Get Maximum,
+=> Get Minimum
+
+
+
+Given a linked list of integer rearrange the list such that are even no. appear before all odd & and orders of even / odd is maintained
+3,20,10,5,7,4
+
+mainatain the even head and odd head, as a reference
+
+
+Q) Find the middle
+
+Q) pair wise swapping node of element
+I/p 1-> 2 ->3 -> 4 ->5 -> 6
+
+O/p 2-> 1 ->4 -> 3 -> 6 -> 5
+
+ Q) Reverse a linked list
+ Q) Find circular in LinkedList.
+ Q) delete & remove loop from linked list
+ Q)Delete n node from m node
+ Q) reverse in group of size k.
+
+
+* Heap Sort 
+
